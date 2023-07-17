@@ -13,10 +13,18 @@
           "children" : [ {
             "children" : [ {
               "attributes" : {
-                "richTextValue" : "<div style=\"display: flex; justify-content: center; align-items: center; margin: 50px 0; flex-direction: column; text-align: center;\"><div style=\"background-image: url(assets/img/desert.svg) !important; background-size: cover; background-position: center; height: 300px; width: 100%; max-width: 600px; min-width: 300px;\"></div><h1 class=\"slds-text-heading_medium slds-p-bottom_x-small\">Start Building Your Page</h1> <div>Drag and drop a component into the content slots.</div></div>"
+                "dxpStyle" : {
+                  "isVisible" : true,
+                  "padding" : {
+                    "bottom" : "0px",
+                    "left" : "0px",
+                    "right" : "0px",
+                    "top" : "0px"
+                  }
+                }
               },
-              "definition" : "community_builder:htmlEditor",
-              "id" : "3ca38046-6605-4c05-a9be-a8a5d2a42858",
+              "definition" : "c:ppageOverview",
+              "id" : "f494c0c0-c65b-466a-a1ab-ecbb5892c315",
               "type" : "component"
             } ],
             "id" : "c7364a71-741b-49a0-9abb-be782ebea822",
