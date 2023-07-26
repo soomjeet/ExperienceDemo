@@ -1,17 +1,44 @@
 <template>
-    <lightning-card icon-name="standard:account" variant="base">
+    <lightning-card variant="base">
       <div slot="title">
-        Portfolio - site
+        <lightning-layout horizontal-align="center" vertical-align="start">
+            <lightning-layout-item size="12" alignment-bump="bottom" flexibility="auto" large-device-size="12" medium-device-size="12" small-device-size="12">
+                <lightning-button-group>
+                    <lightning-button label="Refresh"></lightning-button>
+                    <lightning-button label="Edit"></lightning-button>
+                    <lightning-button label="Save"></lightning-button>
+                </lightning-button-group>
+            </lightning-layout-item>
+        </lightning-layout>
       </div>
       <div slot="actions">
-        test
+        
       </div>
       <div slot="footer">
     
       </div>
       <div>
         <!-- Card Body  -->
-        Portfolio - site 
+        <lightning-layout>
+            
+            <!-- Name & Description-->
+            <lightning-layout-item size="6">
+                <lightning-layout horizontal-align="center" multiple-rows pull-to-boundary="small" vertical-align="start">
+                    <lightning-layout-item>
+                    Name &amp; Description
+                    </lightning-layout-item>
+                </lightning-layout>
+            </lightning-layout-item>
+
+            <!-- Image -->
+            <lightning-layout-item size="6">
+                <lightning-layout horizontal-align="center" multiple-rows pull-to-boundary="small" vertical-align="start">
+                    <lightning-layout-item>
+                    Image
+                    </lightning-layout-item>
+                </lightning-layout>
+            </lightning-layout-item>
+        </lightning-layout>
       </div>
     </lightning-card>
 </template>
