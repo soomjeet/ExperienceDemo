@@ -1,0 +1,34 @@
+<template>
+    <!-- <lightning-card variant="base"> -->''
+      <!-- <div slot="title">
+          Card Title
+      </div>
+      <div slot="actions">
+    
+      </div>
+      <div slot="footer">
+    
+      </div> -->
+      <div class="slds-card slds-card__body slds-card__body_inner">
+        <lightning-accordion
+            allow-multiple-sections-open
+            active-section-name={activeSections}>
+            
+            <!--Summary Section-->
+            <lightning-accordion-section name="summary_section" label="Summary">
+                {label.SUMMARY_LABEL}
+            </lightning-accordion-section>
+            
+            <!-- Experience Section-->
+            <lightning-accordion-section name="experience_section" label="Experience">
+                <c-pp-experience-component></c-pp-experience-component>
+            </lightning-accordion-section>
+
+            <!-- Skill Section-->
+            <lightning-accordion-section name="skills_section" label="Skills">
+                <c-pp-skill-component></c-pp-skill-component>
+            </lightning-accordion-section>
+        </lightning-accordion>
+      </div>
+    <!-- </lightning-card> -->
+</template>
