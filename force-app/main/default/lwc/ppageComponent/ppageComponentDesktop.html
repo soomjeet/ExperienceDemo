@@ -1,6 +1,6 @@
 <template>
-    <!-- <lightning-card variant="base"> -->''
-      <!-- <div slot="title">
+    <!-- <lightning-card variant="base"> -->
+    <!-- <div slot="title">
           Card Title
       </div>
       <div slot="actions">
@@ -9,19 +9,30 @@
       <div slot="footer">
     
       </div> -->
-      <div class="slds-card slds-card__body slds-card__body_inner">
-        <lightning-accordion
-            allow-multiple-sections-open
-            active-section-name={activeSections}>
-            
+    <!-- <img src={sfLogo} alt="Salesforce" class="img-container"> -->
+    <div class="slds-card slds-card__body slds-card__body_inner">
+        <lightning-accordion allow-multiple-sections-open active-section-name={activeSections}>
+
             <!--Summary Section-->
             <lightning-accordion-section name="summary_section" label="Summary">
                 {label.SUMMARY_LABEL}
             </lightning-accordion-section>
-            
+
             <!-- Experience Section-->
             <lightning-accordion-section name="experience_section" label="Experience">
-                <c-pp-experience-component></c-pp-experience-component>
+
+                <lightning-layout multiple-rows="true">
+                    
+                    <lightning-layout-item size="6" padding="around-small">
+                        <c-pp-experience-component experience-records={experiences}></c-pp-experience-component>
+                    </lightning-layout-item>
+                    
+                    <lightning-layout-item size="6" padding="around-small">
+                        <c-pp-certifications-component certification-records={certifications}></c-pp-certifications-component>
+                    </lightning-layout-item>
+
+                </lightning-layout>
+
             </lightning-accordion-section>
 
             <!-- Skill Section-->
@@ -29,6 +40,6 @@
                 <c-pp-skill-component></c-pp-skill-component>
             </lightning-accordion-section>
         </lightning-accordion>
-      </div>
+    </div>
     <!-- </lightning-card> -->
 </template>

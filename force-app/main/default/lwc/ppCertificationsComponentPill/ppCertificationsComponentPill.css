@@ -1,0 +1,6 @@
+:host{
+    --slds-c-pill-radius-border : 1rem;
+    /* --slds-c-pill-spacing-block-end : 0.25rem; */
+    /* --slds-c-pill-container-spacing-block-end : 0.25rem; */
+    --slds-c-pill-line-height : 2
+}

@@ -1,0 +1,48 @@
+<!--
+  @description       : Header Component for cards
+  @author            : soomjeet.sahoo
+  @group             : $groupname
+  @last modified on  : 10-17-2023
+  @last modified by  : soomjeet.sahoo
+-->
+<template>
+    <lightning-layout pull-to-boundary="small" vertical-align="start" multiple-rows="true">
+        <lightning-layout-item size="12" class="slds-var-p-around_xx-small" padding="around-small">
+            <div class="slds-card borderClass" data-id={_containerId} onclick={handleContainerClicked}>
+                <div class="slds-card__header slds-page-header">
+                    <div class="slds-page-header__row">
+                        <div class="slds-page-header__col-title">
+                            <div class="slds-media">
+                                <div class="slds-media__figure">
+                                    <!-- <img src={_companyInfo.displayImagePath} alt={_companyInfo.name} class="img-container"> -->
+                                    <slot name="headerPageIconImageSlot"></slot>
+                                </div>
+                                <div class="slds-media__body">
+                                    <div class="slds-page-header__name">
+                                        <div class="slds-page-header__name-title">
+                                            <h1>
+                                                <!-- <span class="slds-page-header__title slds-truncate"
+                                            title={_companyInfo.name}>{_companyInfo.name}</span> -->
+                                                <slot name="headerPageTitleSlot"></slot>
+                                            </h1>
+                                        </div>
+                                    </div>
+                                    <p class="slds-page-header__name-meta">
+                                        <!-- {_companyInfo.roleName} • {_companyInfo.formattedExpRange} -->
+                                        <slot name="headerPageSubTitleSlot"></slot>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="htmlContentBoxHeightClass">
+                    <!-- <c-pp-rich-text-area-field-read-only
+            html-text-area-content={_companyInfo.workDescription}
+            ></c-pp-rich-text-area-field-read-only> -->
+                    <slot name="headerPageDescriptionSlot"></slot>
+                </div>
+            </div>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>

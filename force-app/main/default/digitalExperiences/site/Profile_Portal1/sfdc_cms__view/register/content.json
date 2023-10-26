@@ -8,12 +8,14 @@
           "attributes" : {
             "backgroundImageConfig" : "",
             "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
             "sectionConfig" : "{\"UUID\":\"f09def1a-97e4-470d-bee6-23c746a5d043\",\"columns\":[{\"UUID\":\"c5082325-9b18-4a5e-9b30-77b94150118d\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
           },
           "children" : [ {
             "children" : [ {
               "attributes" : {
                 "alignment" : "left",
+                "dxpStyle" : { },
                 "imageInfo" : "",
                 "logoWidth" : 250
               },
@@ -24,6 +26,7 @@
               "attributes" : {
                 "cancelLinkLabel" : "Already have an account?",
                 "confirmPasswordLabel" : "Confirm Password",
+                "dxpStyle" : { },
                 "emailLabel" : "Email",
                 "firstnameLabel" : "First Name",
                 "includePasswordField" : true,
@@ -54,6 +57,7 @@
           "attributes" : {
             "customHeadTags" : "",
             "description" : "",
+            "dxpStyle" : { },
             "pageTitle" : "Register",
             "recordId" : "{!recordId}"
           },

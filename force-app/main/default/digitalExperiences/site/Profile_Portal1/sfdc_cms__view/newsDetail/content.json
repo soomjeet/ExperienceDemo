@@ -8,6 +8,7 @@
           "attributes" : {
             "backgroundImageConfig" : "",
             "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
             "sectionConfig" : "{\"UUID\":\"e9d438ea-fb10-46ef-9e4a-d6cc4b37638a\",\"columns\":[{\"UUID\":\"2dc9d84d-4292-4394-8dd5-eb3560dd94fe\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
           },
           "children" : [ {
@@ -29,6 +30,7 @@
           "attributes" : {
             "customHeadTags" : "",
             "description" : "",
+            "dxpStyle" : { },
             "pageTitle" : "{!Content.contentTypeLabel}.{!Content.title}",
             "recordId" : "{!recordId}"
           },

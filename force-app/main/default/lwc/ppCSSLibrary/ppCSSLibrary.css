@@ -1,0 +1,16 @@
+.icon-img-container{
+    width: 45px;
+    height: 45px;
+}
+.borderClass{
+    border: 1px solid var(--slds-g-color-border-base-1,#c9c9c9);
+    border-radius: 0.25rem;
+    border-bottom: 1px solid var(--slds-g-color-border-base-1,#c9c9c9);
+}
+.htmlContentBoxHeightClass{
+    min-height: fit-content;
+}
+.small-icon-img-container{
+    height: var(--lwc-squareIconUtilityMedium, 1.5rem);
+    width: var(--lwc-squareIconUtilityMedium, 1.5rem);
+}

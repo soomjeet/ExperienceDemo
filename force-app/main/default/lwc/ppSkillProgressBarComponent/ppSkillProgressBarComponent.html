@@ -1,0 +1,38 @@
+<template>
+    <!-- <lightning-layout pull-to-boundary="small" vertical-align="start" multiple-rows="true">
+        <lightning-layout-item size="12" padding="around-small">
+            <div class="slds-page-header__row">
+                <div class="slds-page-header__col-title">
+                    <div class="slds-media">
+                        <div class="slds-media__figure">{_progressBarPillData.skillName}</div>
+                        <div class="slds-media__body  slds-var-p-top_xx-small">
+                            <lightning-progress-bar value={skillProgressValue} size="large" variant="circular"></lightning-progress-bar>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </lightning-layout-item>
+    </lightning-layout> -->
+
+
+    <!-- <lightning-layout pull-to-boundary="small" vertical-align="start" multiple-rows="true">
+        <lightning-layout-item size="7" padding="around-small">
+            {_progressBarPillData.skillName}
+        </lightning-layout-item>
+        <lightning-layout-item size="5" padding="around-small">
+            <lightning-progress-bar value={skillProgressValue} size="large" variant="circular"></lightning-progress-bar>
+        </lightning-layout-item>
+    </lightning-layout> -->
+
+    <div class="flex-container">
+
+        <div class="flex-child magenta">
+            {_progressBarPillData.skillName}
+        </div>
+        
+        <div class="flex-child green">
+            <lightning-progress-bar value={skillProgressValue} size="large" variant="circular"></lightning-progress-bar>        
+        </div>
+        
+      </div>
+</template>

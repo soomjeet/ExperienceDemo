@@ -128,6 +128,56 @@
         <field>Account.Org_Position__c</field>
         <readable>false</readable>
     </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Certification__c.Icon_Name__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Certification__c.Order_Number__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Certification__c.Vendor__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Experience__c.Display_Order__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Experience__c.End_Date__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Experience__c.Icon_Name__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Experience__c.Role_Description__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Experience__c.Role__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Experience__c.Start_Date__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Experience__c.isCurrentOrg__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
     <layoutAssignments>
         <layout>Account-Account Layout</layout>
     </layoutAssignments>
@@ -138,6 +188,20 @@
     <layoutAssignments>
         <layout>Account-Account Layout</layout>
         <recordType>Account.Employers</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Certification__c-Certification Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Experience__c-Experience Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Experience__c-Experience Layout</layout>
+        <recordType>Experience__c.Educational_Institutions</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Experience__c-Experience Layout</layout>
+        <recordType>Experience__c.Employers</recordType>
     </layoutAssignments>
     <pageAccesses>
         <apexPage>AnswersHome</apexPage>
@@ -241,9 +305,31 @@
         <recordType>Account.Employers</recordType>
         <visible>false</visible>
     </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>Experience__c.Educational_Institutions</recordType>
+        <visible>false</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>Experience__c.Employers</recordType>
+        <visible>false</visible>
+    </recordTypeVisibilities>
+    <tabVisibilities>
+        <tab>Certification__c</tab>
+        <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>Experience__c</tab>
+        <visibility>Hidden</visibility>
+    </tabVisibilities>
     <tabVisibilities>
         <tab>OveriewCompTab</tab>
         <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>standard-home</tab>
+        <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <userLicense>Guest User License</userLicense>
 </Profile>

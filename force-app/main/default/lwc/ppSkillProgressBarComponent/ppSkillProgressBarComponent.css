@@ -1,0 +1,24 @@
+:host{
+    --progress-bar-width-var:0%;
+}
+
+progressBarWidthClass{
+    width:var(--progress-bar-width-var);
+}
+
+
+.flex-container {
+    display: flex;
+    align-items:center;
+}
+
+.flex-child {
+    flex: 10;
+    border: 2px solid yellow;
+    justify-content:center;
+    /* align-items:center; */
+}  
+
+/* .flex-child:first-child {
+    margin-right: 10px;
+} */

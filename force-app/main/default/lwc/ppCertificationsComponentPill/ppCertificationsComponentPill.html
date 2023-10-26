@@ -1,0 +1,20 @@
+<template>
+    <span class="slds-pill slds-pill_link">
+        <span class="slds-pill__icon_container">
+            <span class="slds-avatar slds-avatar_circle" title={_element.name}>
+                <!-- <img alt="Person name" src="/assets/images/avatar2.jpg" title="User avatar" /> -->
+                <slot name="pillImage"></slot>
+            </span>
+        </span>
+        <a class="slds-pill__action" title={_element.name}>
+            <!-- <span class="slds-pill__label">Pill Label</span> -->
+            <slot name="pillLabel"></slot>
+        </a>
+        <!-- <button class="slds-button slds-button_icon slds-button_icon slds-pill__remove" title="Remove">
+            <svg class="slds-button__icon" aria-hidden="true">
+                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+            </svg>
+            <span class="slds-assistive-text">Remove</span>
+        </button> -->
+    </span>
+</template>
