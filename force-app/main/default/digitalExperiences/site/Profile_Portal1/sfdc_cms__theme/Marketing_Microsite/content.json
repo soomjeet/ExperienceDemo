@@ -1,14 +1,14 @@
 {
   "type" : "sfdc_cms__theme",
-  "title" : "Build Your Own (LWR)",
+  "title" : "Marketing Microsite",
   "contentBody" : {
-    "activeBrandingSetId" : "Build_Your_Own_LWR",
-    "definitionName" : "byo",
+    "activeBrandingSetId" : "Marketing_Microsite",
+    "definitionName" : "marketing",
     "layouts" : [ {
       "layoutId" : "snaThemeLayout",
       "layoutType" : "ServiceNotAvailable"
     }, {
-      "layoutId" : "scopedHeaderAndFooter",
+      "layoutId" : "headerAndFooter",
       "layoutType" : "Inner"
     } ]
   }

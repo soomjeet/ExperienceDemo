@@ -8,44 +8,41 @@
           "attributes" : {
             "backgroundImageConfig" : "",
             "backgroundImageOverlay" : "rgba(0,0,0,0)",
-            "dxpStyle" : { },
-            "sectionConfig" : "{\"UUID\":\"ff4ef393-fb1e-4425-89a3-18585f76393e\",\"columns\":[{\"UUID\":\"fbce20ee-1c01-4c3c-9410-8c0fee88cd12\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+            "sectionConfig" : "{\"UUID\":\"5d2ddee3-d0eb-4e23-a61c-db0891ae02fc\",\"columns\":[{\"UUID\":\"017764a0-d1f1-44c8-aebb-5248c32caee5\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
           },
           "children" : [ {
             "children" : [ {
               "attributes" : {
                 "alignment" : "left",
-                "dxpStyle" : { },
                 "imageInfo" : "",
                 "logoWidth" : 250
               },
               "definition" : "dxp_content_layout:siteLogo",
-              "id" : "4be10a49-c8de-4982-ac57-29a89641515c",
+              "id" : "2bc8927f-891e-4df2-97d5-c6b9937e0ce5",
               "type" : "component"
             }, {
               "attributes" : {
                 "cancelButtonLabel" : "Cancel",
                 "checkEmailUrl" : "./CheckPasswordResetEmail",
-                "dxpStyle" : { },
                 "instructionsLabel" : "To reset your password, enter your username. We'll send a reset-password link to the email address associated with your account.",
                 "submitButtonLabel" : "Reset",
                 "titleLabel" : "Forgot your password?",
                 "usernameLabel" : "Username"
               },
               "definition" : "community_login:forgotPassword",
-              "id" : "64cd58b9-06c4-4928-a82c-72a7d6ae57fa",
+              "id" : "dbed1c12-7486-442f-94a5-91c5d937368b",
               "type" : "component"
             } ],
-            "id" : "fbce20ee-1c01-4c3c-9410-8c0fee88cd12",
+            "id" : "017764a0-d1f1-44c8-aebb-5248c32caee5",
             "name" : "col1",
             "title" : "Column 1",
             "type" : "region"
           } ],
           "definition" : "community_layout:section",
-          "id" : "ff4ef393-fb1e-4425-89a3-18585f76393e",
+          "id" : "5d2ddee3-d0eb-4e23-a61c-db0891ae02fc",
           "type" : "component"
         } ],
-        "id" : "f1f37adf-990f-4de1-8b9e-2c0d0c2f8736",
+        "id" : "4cad455d-2e62-4419-a545-ff6cc98fed65",
         "name" : "content",
         "title" : "Content",
         "type" : "region"
@@ -54,21 +51,20 @@
           "attributes" : {
             "customHeadTags" : "",
             "description" : "",
-            "dxpStyle" : { },
             "pageTitle" : "Forgot Password",
             "recordId" : "{!recordId}"
           },
           "definition" : "community_builder:seoAssistant",
-          "id" : "83959493-20e9-48b1-9dec-10ebf91caebb",
+          "id" : "b6934b84-45ec-4d63-85b5-2599ecb099fc",
           "type" : "component"
         } ],
-        "id" : "0e334090-6ae8-4ef4-b435-9325fdab2c26",
+        "id" : "2cc55b58-b4cb-4220-a08c-a8a1880a7add",
         "name" : "sfdcHiddenRegion",
         "title" : "sfdcHiddenRegion",
         "type" : "region"
       } ],
       "definition" : "community_layout:sldsFlexibleLayout",
-      "id" : "932f21d5-b0fb-4c3a-9699-954b6e3efb17",
+      "id" : "f50fb045-e72a-4c24-8e7e-abb4a03190fe",
       "type" : "component"
     },
     "dataProviders" : [ ],

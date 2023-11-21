@@ -8,42 +8,38 @@
           "attributes" : {
             "backgroundImageConfig" : "",
             "backgroundImageOverlay" : "rgba(0,0,0,0)",
-            "dxpStyle" : { },
-            "sectionConfig" : "{\"UUID\":\"1e53333b-c464-46cf-b081-fa2ba53b348d\",\"columns\":[{\"UUID\":\"a9b9e011-ff85-45e9-ba53-338726d3b86a\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+            "sectionConfig" : "{\"UUID\":\"c7788979-e0be-4990-9a7b-1be993d1479f\",\"columns\":[{\"UUID\":\"4e566ee1-9675-4b90-a24f-d65ccb9185d7\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
           },
           "children" : [ {
             "children" : [ {
               "attributes" : {
-                "dxpStyle" : { },
-                "richTextValue" : "<div style=\"display: flex; align-items: center; flex-direction: column; margin: 60px 25px 30px 25px;\">\n\t<div style=\"background-image: url(assets/img/tooManyRequests.svg) !important; background-size: contain; height: 350px; width: 100%; background-repeat: no-repeat; background-position: center;\"></div>\n</div>\n<div style=\"margin: 0 25px; text-align: center;\">\n\t<h1 class=\"slds-text-heading_large\">Looks like the site is experiencing higher than usual demand&#8230;</h1>\n\t<p class=\"slds-text-heading_small\">Don't go anywhere. We'll redirect you in a moment.</p>\n</div>"
+                "richTextValue" : "<div style=\"display: flex; align-items: center; flex-direction: column; margin: 60px 25px 30px 25px;\">\n\t<div style=\"background-image: url(assets/img/tooManyRequests.svg); background-size: contain; height: 350px; width: 100%; background-repeat: no-repeat; background-position: center;\"></div>\n</div>\n<div style=\"margin: 0 25px; text-align: center;\">\n\t<h1 class=\"slds-text-heading_large\">Looks like the site is experiencing higher than usual demand&#8230;</h1>\n\t<p class=\"slds-text-heading_small\">Don't go anywhere. We'll redirect you in a moment.</p>\n</div>"
               },
               "definition" : "community_builder:htmlEditor",
-              "id" : "b288ac95-132b-431f-bc78-877dd23f273e",
+              "id" : "fb5059ec-603a-4751-8f18-728a08ff432c",
               "type" : "component"
             }, {
-              "attributes" : {
-                "dxpStyle" : { }
-              },
+              "attributes" : { },
               "definition" : "experience_availability:autoRefresh",
-              "id" : "b32ceb78-5317-456a-aa77-edd93ccadc9d",
+              "id" : "a03f82b2-8be6-43b3-887a-3b1aeabcb57e",
               "type" : "component"
             } ],
-            "id" : "a9b9e011-ff85-45e9-ba53-338726d3b86a",
+            "id" : "4e566ee1-9675-4b90-a24f-d65ccb9185d7",
             "name" : "col1",
             "title" : "Column 1",
             "type" : "region"
           } ],
           "definition" : "community_layout:section",
-          "id" : "1e53333b-c464-46cf-b081-fa2ba53b348d",
+          "id" : "c7788979-e0be-4990-9a7b-1be993d1479f",
           "type" : "component"
         } ],
-        "id" : "33b20b08-1071-41cb-9899-8ffdade4fe02",
+        "id" : "a2802d50-70f2-4a27-8e44-f6aa588769cc",
         "name" : "content",
         "title" : "Content",
         "type" : "region"
       } ],
       "definition" : "community_layout:sldsFlexibleLayout",
-      "id" : "cea4fcef-6177-4b49-a11b-2dd11e1bb275",
+      "id" : "35c1adbb-3cf1-410d-a8e3-c591c575923b",
       "type" : "component"
     },
     "dataProviders" : [ ],

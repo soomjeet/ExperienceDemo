@@ -8,35 +8,33 @@
           "attributes" : {
             "backgroundImageConfig" : "",
             "backgroundImageOverlay" : "rgba(0,0,0,0)",
-            "dxpStyle" : { },
-            "sectionConfig" : "{\"UUID\":\"8ab64094-1755-47d4-ab67-35c21dcfc0b1\",\"columns\":[{\"UUID\":\"24c63f51-0583-403c-9bdd-a13bd0f968f6\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+            "sectionConfig" : "{\"UUID\":\"46f9c047-6abb-4e51-b85d-a8756f20ee79\",\"columns\":[{\"UUID\":\"daddf69d-3f96-4419-a2f5-35b38c8beac6\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
           },
           "children" : [ {
             "children" : [ {
               "attributes" : {
-                "dxpStyle" : { },
-                "richTextValue" : "<div style=\"display: flex; align-items: center; flex-direction: column; margin: 60px 25px 40px 25px;\">\n\t<div style=\"background: url(assets/img/serviceNotAvailable.svg) center no-repeat !important; background-size: contain; height: 331px; width: 100%; max-width: 538px;\"></div>\n</div>\n<div style=\"margin: 0 25px; text-align: center;\">\n\t<h1><b style=\"font-size: 2em\">Looks like the site is temporarily unavailable</b></h1>\n\t<br/>\n\t<p><span style=\"font-size: 1.5em;\">Please try again in a bit.</span></p>\n</div>"
+                "richTextValue" : "<div style=\"display: flex; align-items: center; flex-direction: column; margin: 60px 25px 40px 25px;\">\n\t<div style=\"background: url(assets/img/serviceNotAvailable.svg) center no-repeat; background-size: contain; height: 331px; width: 100%; max-width: 538px;\"></div>\n</div>\n<div style=\"margin: 0 25px; text-align: center;\">\n\t<p><b style=\"font-size: 3.4em\">We hit a snag</b></p>\n\t<br/>\n\t<p><span style=\"font-size: 2em;\">Looks like the site is down. Try again in a bit.</span></p>\n</div>"
               },
               "definition" : "community_builder:htmlEditor",
-              "id" : "6ece2c26-aee7-4155-8ab1-82847b88db2e",
+              "id" : "cff21b6d-03da-4eec-93eb-cb2b4f755941",
               "type" : "component"
             } ],
-            "id" : "24c63f51-0583-403c-9bdd-a13bd0f968f6",
+            "id" : "daddf69d-3f96-4419-a2f5-35b38c8beac6",
             "name" : "col1",
             "title" : "Column 1",
             "type" : "region"
           } ],
           "definition" : "community_layout:section",
-          "id" : "8ab64094-1755-47d4-ab67-35c21dcfc0b1",
+          "id" : "46f9c047-6abb-4e51-b85d-a8756f20ee79",
           "type" : "component"
         } ],
-        "id" : "bbff862b-122b-4f3c-a633-02f4353034b5",
+        "id" : "c4a97ecd-77f8-44ea-a34d-ef2a0980abce",
         "name" : "content",
         "title" : "Content",
         "type" : "region"
       } ],
       "definition" : "community_layout:sldsFlexibleLayout",
-      "id" : "25356343-5038-478d-a140-af026b27c086",
+      "id" : "2834341b-470a-49ee-ac4d-836732809e21",
       "type" : "component"
     },
     "dataProviders" : [ ],
