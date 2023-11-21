@@ -1,5 +1,5 @@
 <template>
-    <!-- <lightning-layout pull-to-boundary="small" vertical-align="start" multiple-rows="true">
+  <!-- <lightning-layout pull-to-boundary="small" vertical-align="start" multiple-rows="true">
         <lightning-layout-item size="12" padding="around-small">
             <div class="slds-page-header__row">
                 <div class="slds-page-header__col-title">
@@ -14,8 +14,7 @@
         </lightning-layout-item>
     </lightning-layout> -->
 
-
-    <!-- <lightning-layout pull-to-boundary="small" vertical-align="start" multiple-rows="true">
+  <!-- <lightning-layout pull-to-boundary="small" vertical-align="start" multiple-rows="true">
         <lightning-layout-item size="7" padding="around-small">
             {_progressBarPillData.skillName}
         </lightning-layout-item>
@@ -24,15 +23,16 @@
         </lightning-layout-item>
     </lightning-layout> -->
 
-    <div class="flex-container">
+  <div class="flex-container">
+    <!-- <div class="flex-child">{_progressBarPillData.skillName}</div> -->
 
-        <div class="flex-child magenta">
-            {_progressBarPillData.skillName}
-        </div>
-        
-        <div class="flex-child green">
-            <lightning-progress-bar value={skillProgressValue} size="large" variant="circular"></lightning-progress-bar>        
-        </div>
-        
-      </div>
+    <div class="flex-child" if:true={skillRatingValue}>
+        {_progressBarPillData.skillName}  
+    <lightning-progress-bar
+        value={skillRatingValue}
+        size="large"
+        variant="circular"
+      ></lightning-progress-bar>
+    </div>
+  </div>
 </template>

@@ -16,17 +16,24 @@ public with sharing class PortfolioProfileController {
         Schema.SObjectType.Experience__c.getRecordTypeInfosByDeveloperName().get(EDUCATIONAL_INSTITUTION_RECORDTYPE_DEVELOPERNAME).getRecordTypeId(),
         Schema.SObjectType.Experience__c.getRecordTypeInfosByDeveloperName().get(EMPLOYERS_RECORDTYPE_DEVELOPERNAME).getRecordTypeId()
     };
+    private static final boolean TRUE_BOOLEAN_VALUE = true;
 
     /* Certification part */
     private static final String PP_CERTIFICATIONS_FIELD_SET_NAME = 'pp_Certifications_Field_Set';
     private static final string CERTIFICATIONS_OBJ_API_NAME = Certification__c.sObjectType.getDescribe().getName();
 
-    @AuraEnabled
+
+    /* Skill part */
+    private static final String PP_SKILLS_FIELD_SET_NAME = 'pp_Skills_Field_Set';
+    private static final string SKILLS_OBJ_API_NAME = Skill__c.sObjectType.getDescribe().getName();
+
+    @AuraEnabled(cacheable=true)
     public static PortfolioWrapper getPortfolioData() {
         PortfolioWrapper pWrapRec = new PortfolioWrapper();
         try {
             pWrapRec.experiences = getExperiences();
             pWrapRec.certifications = getCertifications();
+            pWrapRec.skills = getSkills();
         } catch (Exception exp) {
             System.debug(exp.getStackTraceString());
             throw new AuraHandledException(exp.getMessage());
@@ -37,9 +44,9 @@ public with sharing class PortfolioProfileController {
     
     private static List<ExperienceComponentWrapper> getExperiences(){
         List<ExperienceComponentWrapper> expWrapperList = new List<ExperienceComponentWrapper>(); 
-        String accountGetQuery = 'SELECT '+PortfolioProfileControllerUtil.getAllFieldsFromFS(PP_EXPERIENCE_FIELD_SET_NAME, EXPERIENCE_OBJ_API_NAME)+' FROM '+EXPERIENCE_OBJ_API_NAME+' WHERE RecordTypeId IN: EXPERIENCE_OBJ_RT_IDS ORDER BY Display_Order__c';
+        String accountGetQuery = 'SELECT '+PortfolioProfileControllerUtil.getAllFieldsFromFS(PP_EXPERIENCE_FIELD_SET_NAME, EXPERIENCE_OBJ_API_NAME)+' FROM '+EXPERIENCE_OBJ_API_NAME+' WHERE RecordTypeId IN: EXPERIENCE_OBJ_RT_IDS AND isActive__c =: TRUE_BOOLEAN_VALUE ORDER BY Display_Order__c';
         System.debug('accountGetQuery >> '+accountGetQuery);
-        for (Experience__c exp : Database.query(String.escapeSingleQuotes(accountGetQuery), AccessLevel.SYSTEM_MODE)) {
+        for (Experience__c exp : Database.query(String.escapeSingleQuotes(accountGetQuery), AccessLevel.USER_MODE)) {
             ExperienceComponentWrapper ecWrapRec = new ExperienceComponentWrapper();
             ecWrapRec.id = exp?.id;
             ecWrapRec.name = exp?.Name;
@@ -59,9 +66,9 @@ public with sharing class PortfolioProfileController {
 
     private static List<CertificationsWrapper> getCertifications() {
         List<CertificationsWrapper> certWrapperList = new List<CertificationsWrapper>();
-        String certificationsGetQuery = 'SELECT '+PortfolioProfileControllerUtil.getAllFieldsFromFS(PP_CERTIFICATIONS_FIELD_SET_NAME, CERTIFICATIONS_OBJ_API_NAME)+' FROM '+CERTIFICATIONS_OBJ_API_NAME+' ORDER BY Order_Number__c';
+        String certificationsGetQuery = 'SELECT '+PortfolioProfileControllerUtil.getAllFieldsFromFS(PP_CERTIFICATIONS_FIELD_SET_NAME, CERTIFICATIONS_OBJ_API_NAME)+' FROM '+CERTIFICATIONS_OBJ_API_NAME+' WHERE isActive__c =: TRUE_BOOLEAN_VALUE ORDER BY Order_Number__c';
         System.debug('certificationsGetQuery >> '+certificationsGetQuery);
-        for(Certification__c cert : Database.query(String.escapeSingleQuotes(certificationsGetQuery), AccessLevel.SYSTEM_MODE)){
+        for(Certification__c cert : Database.query(String.escapeSingleQuotes(certificationsGetQuery), AccessLevel.USER_MODE)){
             CertificationsWrapper certWrap = new CertificationsWrapper();
             certWrap.id = cert.Id;
             certWrap.name = cert.Name;
@@ -72,9 +79,25 @@ public with sharing class PortfolioProfileController {
     }
 
 
+    private static List<SkillWrapper> getSkills() {
+        List<SkillWrapper> skillWrapperList = new List<SkillWrapper>();
+        String skillsGetQuery = 'SELECT '+PortfolioProfileControllerUtil.getAllFieldsFromFS(PP_SKILLS_FIELD_SET_NAME, SKILLS_OBJ_API_NAME)+' FROM '+SKILLS_OBJ_API_NAME+' WHERE isActive__c =: TRUE_BOOLEAN_VALUE ORDER BY Skill_Rating__c DESC';
+        System.debug('skillsGetQuery >> '+skillsGetQuery);
+        for(Skill__c skill : Database.query(String.escapeSingleQuotes(skillsGetQuery), AccessLevel.USER_MODE)){
+            SkillWrapper skillWrap = new SkillWrapper();
+            skillWrap.id = skill.Id;
+            skillWrap.skillName = skill.Name;
+            skillWrap.skillRating = Integer.valueOf(skill.Skill_Rating__c);
+            skillWrapperList.add(skillWrap);
+        }
+        return skillWrapperList;
+    }
+
+
     public class PortfolioWrapper{
         @AuraEnabled public List<ExperienceComponentWrapper> experiences;
         @AuraEnabled public List<CertificationsWrapper> certifications;
+        @AuraEnabled public List<SkillWrapper> skills;
     }
 
     public class ExperienceComponentWrapper{
@@ -94,5 +117,11 @@ public with sharing class PortfolioProfileController {
         @AuraEnabled public String id;
         @AuraEnabled public String name;
         @AuraEnabled public String iconName;
+    }
+
+    public class SkillWrapper {
+        @AuraEnabled public String id;
+        @AuraEnabled public String skillName;
+        @AuraEnabled public Integer skillRating;
     }
 }

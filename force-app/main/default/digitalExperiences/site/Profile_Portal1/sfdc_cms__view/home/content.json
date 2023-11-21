@@ -19,35 +19,6 @@
               "definition" : "c:ppageComponent",
               "id" : "fbc9f4f6-855c-4092-806e-af2a68a4f014",
               "type" : "component"
-            }, {
-              "attributes" : {
-                "dxpStyle" : { }
-              },
-              "definition" : "c:ppageOverview",
-              "id" : "0e590689-c5e2-4a42-9ee6-1a2abe32e745",
-              "type" : "component"
-            }, {
-              "attributes" : {
-                "dxpStyle" : { }
-              },
-              "definition" : "c:ppageComponent",
-              "id" : "e32d0db0-3390-4216-bede-e1408e5165ca",
-              "type" : "component"
-            }, {
-              "attributes" : {
-                "dxpStyle" : { },
-                "richTextValue" : "<div style=\"display: flex; justify-content: center; align-items: center; margin: 50px 0; flex-direction: column; text-align: center;\"><div style=\"background-image: url(assets/img/desert.svg) !important; background-size: cover; background-position: center; height: 300px; width: 100%; max-width: 600px; min-width: 300px;\"></div><h1 class=\"slds-text-heading_medium slds-p-bottom_x-small\">Start Building Your Page</h1> <div>Drag and drop a component into the content slots.</div></div>"
-              },
-              "definition" : "community_builder:htmlEditor",
-              "id" : "772364ed-fe15-4524-a5b3-053638674e1a",
-              "type" : "component"
-            }, {
-              "attributes" : {
-                "dxpStyle" : { }
-              },
-              "definition" : "c:ppageOverview",
-              "id" : "85a16361-9403-43e5-895e-344614594899",
-              "type" : "component"
             } ],
             "id" : "7f358d21-7e93-484f-85a2-f49eaa859f7c",
             "name" : "col1",

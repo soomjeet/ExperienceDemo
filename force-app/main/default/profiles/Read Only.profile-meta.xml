@@ -95,7 +95,7 @@
     </classAccesses>
     <classAccesses>
         <apexClass>PortfolioProfileController</apexClass>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>PortfolioProfileControllerUtil</apexClass>
@@ -129,6 +129,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Asset.AssetType__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Certification__c.Icon_Name__c</field>
         <readable>true</readable>
@@ -141,6 +146,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Certification__c.Vendor__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Certification__c.isActive__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -175,7 +185,27 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Experience__c.isActive__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Experience__c.isCurrentOrg__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Skill__c.Order_Number__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Skill__c.Skill_Rating__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Skill__c.isActive__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <layoutAssignments>
@@ -190,6 +220,9 @@
         <recordType>Account.Employers</recordType>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Asset-Asset Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Certification__c-Certification Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -202,6 +235,9 @@
     <layoutAssignments>
         <layout>Experience__c-Experience Layout</layout>
         <recordType>Experience__c.Employers</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Skill__c-Skill Layout</layout>
     </layoutAssignments>
     <pageAccesses>
         <apexPage>AnswersHome</apexPage>
@@ -328,8 +364,8 @@
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
-        <tab>standard-home</tab>
-        <visibility>DefaultOn</visibility>
+        <tab>Skill__c</tab>
+        <visibility>Hidden</visibility>
     </tabVisibilities>
     <userLicense>Salesforce</userLicense>
     <userPermissions>

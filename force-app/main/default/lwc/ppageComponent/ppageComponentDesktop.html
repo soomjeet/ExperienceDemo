@@ -1,15 +1,4 @@
 <template>
-    <!-- <lightning-card variant="base"> -->
-    <!-- <div slot="title">
-          Card Title
-      </div>
-      <div slot="actions">
-    
-      </div>
-      <div slot="footer">
-    
-      </div> -->
-    <!-- <img src={sfLogo} alt="Salesforce" class="img-container"> -->
     <div class="slds-card slds-card__body slds-card__body_inner">
         <lightning-accordion allow-multiple-sections-open active-section-name={activeSections}>
 
@@ -37,7 +26,7 @@
 
             <!-- Skill Section-->
             <lightning-accordion-section name="skills_section" label="Skills">
-                <c-pp-skill-component></c-pp-skill-component>
+                <c-pp-skill-component skill-records={skills}></c-pp-skill-component>
             </lightning-accordion-section>
         </lightning-accordion>
     </div>
