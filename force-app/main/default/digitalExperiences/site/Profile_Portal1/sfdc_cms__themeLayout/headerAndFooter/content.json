@@ -36,6 +36,9 @@
       }, {
         "children" : [ {
           "attributes" : {
+            "dxpStyle" : {
+              "isVisible" : false
+            },
             "height" : 50,
             "imageInfo" : "{}",
             "imageOverlayColor" : "rgba(0,0,0,0)",
@@ -97,6 +100,12 @@
             "sectionConfig" : "{\"UUID\":\"c1fa369c-4414-439d-8d95-0993aa093328\",\"columns\":[{\"UUID\":\"8bbe9742-0688-437c-a260-5f51ae9676b0\",\"columnName\":\"Column 1\",\"columnKey\":\"footerSection\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
           },
           "children" : [ {
+            "children" : [ {
+              "attributes" : { },
+              "definition" : "c:ppageComponent",
+              "id" : "1d99d9aa-d53a-437e-9bdd-706298a16ee0",
+              "type" : "component"
+            } ],
             "id" : "8bbe9742-0688-437c-a260-5f51ae9676b0",
             "name" : "footerSection",
             "title" : "Theme Footer",
